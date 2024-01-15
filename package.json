@@ -1,6 +1,7 @@
 {
   "name": "nft-marketplace-app",
-  "version": "0.1.0",
+  "homepage": "https://efsoftworks.github.io/nft-marketplace-app",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
