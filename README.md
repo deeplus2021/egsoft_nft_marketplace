@@ -9,23 +9,19 @@
   <p align="center">
     This project, 'marketplace-app,' introduces a distinctive NFT marketplace inspired by OpenSea. With powerful smart contracts, complete customization, and secure transactions, it offers a unique platform tailored to your brand. Connect with us to explore the possibilities of this NFT marketplace.
     <br/>
-    <br/>
-    <a href="https://github.com//"><strong>Explore the docs »</strong></a>
-    <br/>
-    <br/>
-    <a href="https://github.com//">View Demo</a>
-    .
-    <a href="https://github.com///issues">Report Bug</a>
-    .
-    <a href="https://github.com///issues">Request Feature</a>
+    <a href="https://efsoftworks.github.io/nft-marketplace-app/">View Demo</a>
   </p>
 </p>
 
 
 
 ## About The Project
+  <p align="center">
+ <a href="https://github.com//">
+    <img src="https://readme.shaankhan.dev/images/screenshot.png" alt="Header" width="800" height="600">
+</a>
+</p>
 
-![Screen Shot](images/screenshot.png)
 
 The core vision of the NFT Marketplace DApp is to create a vibrant and inclusive ecosystem where artists, collectors, and enthusiasts can seamlessly engage in the creation, discovery, and exchange of digital assets. We envision a platform that transcends traditional boundaries, fostering a global community passionate about the value and uniqueness embedded in each NFT.
 
