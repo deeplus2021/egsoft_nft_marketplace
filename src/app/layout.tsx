@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+
 import Navbar from './component/navbar'
+import { Web3ModalProvider } from './context/Web3Modal'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,8 +21,10 @@ export default function RootLayout({
     <>
       <html lang="en">
         <body className={inter.className}>
-          <Navbar />
-          {children}
+          <Web3ModalProvider>
+            <Navbar />
+            {children}
+          </Web3ModalProvider>
         </body>
       </html>
     </>
