@@ -1,4 +1,3 @@
-
 "use client"
 import { useWeb3Modal, useWeb3ModalAccount } from '@web3modal/ethers5/react'
 import { useEffect } from 'react';
