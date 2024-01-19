@@ -1,14 +1,17 @@
 import React from 'react';
 import { FaEthereum } from "react-icons/fa";
 
-const NftCard: React.FC = () => {
+
+interface INftCard {
+    imageUrl:string
+}
+
+const NftCard = (props:INftCard) => {
   return (
-    <div className='rounded-2xl	bg-slate-800'>
-        <div className='rounded-lg mb-4 overflow-hidden'>
-            <a>
-                <img className='w-full h-auto object-cover' src='https://opne9reactnext.vercel.app/assets/images/box-item/card-item-05.jpg'/>
-            </a>
-        </div>
+    <div className='rounded-2xl	bg-slate-800' style={{width:"255px"}}>
+        <div className='relative rounded-lg mb-4 overflow-hidden card-media h-full'>
+                <img className='w-full h-64 object-cover' src={props.imageUrl} alt=""/>
+            </div>
         <h5 className='mb-4 leading-5 font-bold pl-2 pr-2'>
             <a className='none'>
                 Nft Name 001
