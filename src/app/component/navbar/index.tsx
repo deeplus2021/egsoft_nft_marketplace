@@ -45,7 +45,7 @@ const Navbar = () => {
                             }
                         </li>
                         <li>
-                            <ProfileMenu />
+                            <ProfileMenu fallback={()=>open()} />
                         </li>
                     </ul>
                 </div>
