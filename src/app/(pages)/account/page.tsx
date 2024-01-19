@@ -1,15 +1,24 @@
 "use client"
 import { useWeb3Modal, useWeb3ModalAccount } from '@web3modal/ethers5/react'
 import { shortenWalletAddress } from '@/app/utils/Web3Modal';
+import { redirect } from 'next/navigation';
 
 //icons
 import { FaEthereum } from "react-icons/fa";
 import { LuShare } from "react-icons/lu";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import AccountsTabs from '@/app/component/tabs/profile.tabs';
+import { useEffect } from 'react';
 
 const AccountPage = () => {
+
     const { address, chainId, isConnected } = useWeb3ModalAccount()
+
+    useEffect(()=>{
+        if(!isConnected){
+            redirect("/")
+        }
+    },[isConnected])
 
     return (
         <div className="flex flex-col h-full flex-1">
