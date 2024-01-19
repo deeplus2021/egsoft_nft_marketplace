@@ -1,0 +1,80 @@
+/* .swiper-container, .swiper-wrapper, .swiper-slide gibi temel sınıfları eklemeyi unutmayın */
+.nftcard-effect-swiper {
+    width: 456px;
+    height: auto;
+    border-radius: 18px; /* Bu satır ekledim, swiper-container'ın kenarlarını yuvarlar */
+  }
+  
+  .nftcard-effect-swiper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px; /* Bu satır ekledim, swiper-slide'ın kenarlarını yuvarlar */
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(1n) {
+    background-color: rgb(206, 17, 17);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(2n) {
+    background-color: rgb(0, 140, 255);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(3n) {
+    background-color: rgb(10, 184, 111);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(4n) {
+    background-color: rgb(211, 122, 7);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+  
+  .nftcard-effect-swiper .swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+
+  .nftcard-effect-swiper .swiper-button-prev {
+    left: -97px;
+  }
+
+  .nftcard-effect-swiper .swiper-button-prev::after {
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .nftcard-effect-swiper .swiper-button-next {
+    right: -97px;
+  }
+
+  .nftcard-effect-swiper .swiper-button-next::after {
+    color: #fff;
+    font-size: 24px;
+  }
+
+  .nftcard-effect-swiper .swiper-button-prev, .swiper-button-next {
+    border-radius: 999px;
+    border: 1px solid hsla(0,0%,100%,.1);
+    background: hsla(0,0%,100%,.1);
+    width: 67px;
+    height: 67px;
+    padding: 22px;
+    transition: all .3s ease-in-out;
+  }

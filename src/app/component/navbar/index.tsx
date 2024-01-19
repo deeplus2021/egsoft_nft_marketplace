@@ -1,4 +1,3 @@
-
 "use client"
 import { useWeb3Modal, useWeb3ModalAccount } from '@web3modal/ethers5/react'
 import { useEffect } from 'react';
@@ -46,7 +45,7 @@ const Navbar = () => {
                             }
                         </li>
                         <li>
-                            <ProfileMenu />
+                            <ProfileMenu fallback={()=>open()} />
                         </li>
                     </ul>
                 </div>

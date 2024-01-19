@@ -1,30 +1,43 @@
+"use client"
+import { useWeb3Modal, useWeb3ModalAccount } from '@web3modal/ethers5/react'
 import { Menu, Transition } from '@headlessui/react'
 import { Fragment, useEffect, useRef, useState } from 'react'
 
-import { FaChevronDown } from "react-icons/fa";
+import Link from 'next/link'
+
+
 import { HiOutlineUserCircle } from "react-icons/hi2";
 
+interface IProfileMenu {
+    fallback: () => void
+}
 
-const solutions = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#' },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#' },
-    { name: 'Security', description: "Your customers' data will be safe and secure", href: '#' },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#' },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#' },
-]
-const callsToAction = [
-    { name: 'Watch demo', href: '#' },
-    { name: 'Contact sales', href: '#' },
-]
+const ProfileMenu = (props:IProfileMenu) => {
+    const { isConnected } = useWeb3ModalAccount()
 
-const ProfileMenu = () => {
+    const ProfileButton = ({ active }: any) => {
+        return (
+            <button
+                className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+            >
+                Profile
+            </button>
+        )
+    }
+
     return (
-
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left z-40">
             <div>
-                <Menu.Button className="flex items-center transition duration-200 ease-in-out bg-transparent bg-slate-50 bg-opacity-10 text-blue-700 font-semibold hover:bg-slate-50 hover:bg-opacity-20 py-2 px-4 hover:border-transparent  rounded-xl relative" style={{ height: '48px', minWidth: '48px' }}>
-                    <HiOutlineUserCircle size={25} color='white' />
-                </Menu.Button>
+                {
+                    isConnected ?
+                        <Menu.Button className="flex items-center transition duration-200 ease-in-out bg-transparent bg-slate-50 bg-opacity-10 text-blue-700 font-semibold hover:bg-slate-50 hover:bg-opacity-20 py-2 px-4 hover:border-transparent  rounded-xl relative" style={{ height: '48px', minWidth: '48px' }}>
+                            <HiOutlineUserCircle size={25} color='white' />
+                        </Menu.Button> : 
+                        <button onClick={props.fallback} className="flex items-center transition duration-200 ease-in-out bg-transparent bg-slate-50 bg-opacity-10 text-blue-700 font-semibold hover:bg-slate-50 hover:bg-opacity-20 py-2 px-4 hover:border-transparent  rounded-xl relative" style={{ height: '48px', minWidth: '48px' }}>
+                            <HiOutlineUserCircle size={25} color='white' />
+                        </button>
+                }
             </div>
             <Transition
                 as={Fragment}
@@ -39,12 +52,9 @@ const ProfileMenu = () => {
                     <div className="px-1 py-1 ">
                         <Menu.Item>
                             {({ active }) => (
-                                <button
-                                    className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
-                                        } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
-                                >
-                                    Profile
-                                </button>
+                                <Link href="/account" >
+                                    <ProfileButton active={active} />
+                                </Link>
                             )}
                         </Menu.Item>
                         <Menu.Item>
@@ -53,7 +63,6 @@ const ProfileMenu = () => {
                                     className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
                                         } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                 >
-
                                     Watchlist
                                 </button>
                             )}
@@ -66,7 +75,6 @@ const ProfileMenu = () => {
                                     className={`${active ? 'bg-violet-500 text-white' : 'text-gray-900'
                                         } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                 >
-
                                     Settings
                                 </button>
                             )}
