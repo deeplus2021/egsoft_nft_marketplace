@@ -222,12 +222,3 @@ Open-Source License:
 This project is released under a suitable open-source license to encourage collaboration, transparency, and the sharing of knowledge within the developer community. The chosen license ensures that developers can freely use, modify, and distribute the code, contributing to the growth and improvement of the overall ecosystem.
 
 Please refer to the project's LICENSE.md file for the specific terms and conditions of the open-source license chosen for this project. Your engagement and contributions are welcomed and appreciated under the provisions of this license.
-
-## Authors
-
-* **Faru Nuri Sönmez** - *Full Stack Developer* - [Faru Nuri Sönmez](https://github.com/farunurisonmez/) - **
-* **Eda Sönmez** - *Frontend Developer | UI / UX Designer* - [Eda Sönmez](https://github.com/edatalas) - **
-
-## Acknowledgements
-
-* [Faru Nuri Sonmez](https://github.com/farunurisonmez/)
